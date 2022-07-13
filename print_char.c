@@ -1,28 +1,13 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdarg.h>
-#include "holberton.h"
-
+#include "main.h"
 /**
- * print_char - prints character
- * @c: char to be prited
- * Return 1
- */
-
-int print_char(va_list c)
-{
-unsigned char my_ch;
-my_ch = va_arg(c, int);
-_putchar(my_ch);
-return (1);
-}
-
-/**
- * print_percent - prints persentage
+ * print_char - prints the character from the argument
+ * @valist: holds the argument
  * Return: 1
  */
-int print_percent(void)
+int print_char(va_list valist)
 {
-_putchar('%');
-return (1);
+	int count = 0;
+
+	count += print_out(va_arg(valist, int));
+	return (1);
 }
